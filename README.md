@@ -21,7 +21,26 @@ pip install -r requirements.txt
 
 Usage
 
-Ensure you have a pre-trained model saved in models/bert_model/.
+Model Creation:
+
+### 1. Install Dependencies
+pip install pandas numpy tensorflow
+
+
+### 2. Prepare Dataset
+Make sure these files are present in your project folder:
+- `train.csv`
+- `test.csv`
+
+### 3. Run the Script
+python train.py
+
+### 4. Output Files
+After execution, the following files will be generated:
+- `cnn_toxic_model.h5` → Trained CNN model
+- `tokenizer.pkl` → Saved tokenizer
+
+Ensure you have a pre-trained model saved in cnn_toxic_model.h5.
 
 Run the Streamlit dashboard:
 
@@ -36,10 +55,8 @@ Upload CSV for bulk predictions
 Project Structure
 toxicity_detection/
 ├─ app.py
-├─ model_utils.py
-├─ data_utils.py
-├─ train_model.py
-├─ models/
+├─ preprocess.py
+├─ cnn_toxic_model.h5
+├─ tokenizer.pkl
 ├─ requirements.txt
 ├─ README.md
-└─ sample_data/
